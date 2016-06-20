@@ -1,5 +1,20 @@
+PREFACE
 The variability of procedures among hospitals will
 be determined by comparing the standard deviations
 of the scores grouped by procedure, where the score
 comes from the "Timely and Effective Care" file.
+
+RESULTS
+Emergency Department                101.56450810284                                         
+Heart Attack or Chest Pain          36.44250772948896
+Blood Clot Prevention and Treatment 27.70563922846628
+Preventive Care                     15.32606737941426
+Stroke Care                         10.188649927111449
+Heart Failure                       10.057839843078725
+Pneumonia                           9.275894472939902
+Children's Asthma                   8.847945944880063
+Pregnancy and Delivery Care         6.958257962124783
+Surgical Care Improvement Project   4.738913076942953
+
+CONCLUSION
 

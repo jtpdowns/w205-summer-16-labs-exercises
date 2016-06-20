@@ -1,7 +1,13 @@
+PREFACE
 To determine the relationship between hospital
 quality metrics and patient satisfaction, the
 scores for mean and standard deviation according
 to the "Timely and Effective Care" file will be
 compared to the number of stars from patient
 surveys for the hospital.
+
+RESULTS
+-0.22229487706036485
+
+CONCLUSION
 
