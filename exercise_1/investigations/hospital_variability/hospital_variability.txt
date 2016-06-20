@@ -17,4 +17,10 @@ Pregnancy and Delivery Care         6.958257962124783
 Surgical Care Improvement Project   4.738913076942953
 
 CONCLUSION
+It seems that the most variability occurs primarily
+in the handling of emergency medical services and
+cardiovascular disorders. It is worth noting in
+particular that the standard deviation in emergency
+department treatment score is nearly a factor of three
+larger than the deviation in the next highest value.
 

@@ -10,4 +10,19 @@ RESULTS
 -0.22229487706036485
 
 CONCLUSION
+The number above represents the Pearson
+correlation between the average patient rating
+for a hospital and the average score by the
+quality metric for that same hospital. This value
+came out to be negative, though relatively small.
+This certainly suggests that there is no positive
+relationship, which is counterintuitive. It is possible
+that hospitals unable to treat patients efficiently
+maintain above average bedside manner, or it could
+be that hospitals operating efficiently do so with
+and emphasis on throughput and moving patients
+out quickly and even brusquely. More likely, this
+may be an instance of Simpson's paradox, such that
+stratifying by another hidden variable could cause
+strong positive correlation.
 

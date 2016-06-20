@@ -4,15 +4,24 @@ as obtained from the "Timely and Effective Care" file.
 
 RESULTS
 FALLS COMMUNITY HOSPITAL AND CLINIC     235.58333333333334                      
-BEAR VALLEY COMMUNITY HOSPITAL  175.33333333333334
-HOSP COMUNITARIO BUEN SAMARITANO    167.25
-MEDINA REGIONAL HOSPITAL    136.0
-NEWARK BETH ISRAEL MEDICAL CENTER   134.81578947368422
-REDWOOD MEMORIAL HOSPITAL   130.33333333333334
-HOSPITAL HERMANOS MELENDEZ INC  130.21052631578948
-MERCY HOSPITAL CASSVILLE    128.0
-COMMUNITY MEMORIAL HOSPITAL, INC    127.66666666666667
-BOONE MEMORIAL HOSPITAL 125.33333333333333
+BEAR VALLEY COMMUNITY HOSPITAL          175.33333333333334
+HOSP COMUNITARIO BUEN SAMARITANO        167.25
+MEDINA REGIONAL HOSPITAL                136.0
+NEWARK BETH ISRAEL MEDICAL CENTER       134.81578947368422
+REDWOOD MEMORIAL HOSPITAL               130.33333333333334
+HOSPITAL HERMANOS MELENDEZ INC          130.21052631578948
+MERCY HOSPITAL CASSVILLE                128.0
+COMMUNITY MEMORIAL HOSPITAL, INC        127.66666666666667
+BOONE MEMORIAL HOSPITAL                 125.33333333333333
 
 CONCLUSION
+Using the existing metrics, it seems that the Falls
+Community Hospital and Clinic averages much higher than
+the next best hospital. The metrics from "Timely and
+Effective Care" reflect good performance of a hospital
+for times when typical treatment applies to a patient's
+condition, so they should be a fair representation of
+a hospital doing well at what it should do. From this
+point of view, it seems that Falls Community is far
+above the rest.
 

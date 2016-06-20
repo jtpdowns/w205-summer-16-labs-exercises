@@ -16,4 +16,10 @@ CA  95.29843735020611
 CT  95.15523809523809
 
 CONCLUSION
+By the existing metrics, the Northeast of
+the US contains nine out of the ten best
+sets of hospitals. Since this list largely
+coincides with the top of the list for GDP
+per capita (https://en.wikipedia.org/wiki/List_of_U.S._states_by_income)
+in the US, it makes sense for us here.
 
