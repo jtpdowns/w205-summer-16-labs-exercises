@@ -1,0 +1,5 @@
+The variability of procedures among hospitals will
+be determined by comparing the standard deviations
+of the scores grouped by procedure, where the score
+comes from the "Timely and Effective Care" file.
+

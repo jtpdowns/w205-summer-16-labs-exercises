@@ -1,0 +1,4 @@
+The best states will here be judged as the states
+whose hospitals had the highest average score as
+determined by the "Timely and Effective Care" file.
+
