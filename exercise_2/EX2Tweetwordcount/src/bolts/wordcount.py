@@ -20,6 +20,7 @@ class WordCounter(Bolt):
         # Table name: Tweetwordcount 
         # you need to create both the database and the table in advance.
         # conn = psycopg2.connect(database="Tcount", user="w205", password="", host="localhost", port="5432")
+        # cur = conn.cursor()
         # try:
         # cur.execute("SELECT word, count from Tweetwordcount WHERE word=%s", (word))
         # currentCount = cur.fetchone()[1]
@@ -29,6 +30,8 @@ class WordCounter(Bolt):
         # cur.execute("INSERT INTO Tweetwordcount (word, count) \
         #     VALUES (%s, 1)", (word));
         # conn.commit()
+
+        # conn.close()
 
         # Increment the local count
         self.counts[word] += 1
