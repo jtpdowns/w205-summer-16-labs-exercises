@@ -1,0 +1,591 @@
+Running tweetwordcount topology...
+Routing Python logging to /home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs.
+Running lein command to run local cluster:
+lein run -m streamparse.commands.run/-main topologies/tweetwordcount.clj -t 0 --option 'topology.workers=2' --option 'topology.acker.executors=2' --option 'streamparse.log.path="/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs"' --option 'streamparse.log.level="debug"'
+3246 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+3249 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:host.name=ip-172-31-20-232.ec2.internal
+3249 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:java.version=1.7.0_79
+3249 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:java.vendor=Oracle Corporation
+3250 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:java.home=/opt/jdk1.7.0_79/jre
+3250 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:java.class.path=/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/test:/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/topologies:/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/dev-resources:/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/_resources:/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/_build/classes:/home/w205/.m2/repository/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar:/home/w205/.m2/repository/org/clojure/tools.macro/0.1.0/tools.macro-0.1.0.jar:/home/w205/.m2/repository/ring/ring-core/1.1.5/ring-core-1.1.5.jar:/home/w205/.m2/repository/hiccup/hiccup/0.3.6/hiccup-0.3.6.jar:/home/w205/.m2/repository/ring/ring-servlet/0.3.11/ring-servlet-0.3.11.jar:/home/w205/.m2/repository/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar:/home/w205/.m2/repository/org/clojure/math.numeric-tower/0.0.1/math.numeric-tower-0.0.1.jar:/home/w205/.m2/repository/clj-time/clj-time/0.4.1/clj-time-0.4.1.jar:/home/w205/.m2/repository/org/objenesis/objenesis/1.2/objenesis-1.2.jar:/home/w205/.m2/repository/com/twitter/chill-java/0.3.5/chill-java-0.3.5.jar:/home/w205/.m2/repository/com/parsely/streamparse/0.0.4-SNAPSHOT/streamparse-0.0.4-SNAPSHOT.jar:/home/w205/.m2/repository/ring/ring-jetty-adapter/0.3.11/ring-jetty-adapter-0.3.11.jar:/home/w205/.m2/repository/jline/jline/2.11/jline-2.11.jar:/home/w205/.m2/repository/clj-stacktrace/clj-stacktrace/0.2.2/clj-stacktrace-0.2.2.jar:/home/w205/.m2/repository/org/clojure/tools.nrepl/0.2.12/tools.nrepl-0.2.12.jar:/home/w205/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/home/w205/.m2/repository/ring/ring-devel/0.3.11/ring-devel-0.3.11.jar:/home/w205/.m2/repository/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar:/home/w205/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/home/w205/.m2/repository/clojure-complete/clojure-complete/0.2.4/clojure-complete-0.2.4.jar:/home/w205/.m2/repository/org/yaml/snakeyaml/1.11/snakeyaml-1.11.jar:/home/w205/.m2/repository/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar:/home/w205/.m2/repository/commons-lang/commons-lang/2.5/commons-lang-2.5.jar:/home/w205/.m2/repository/org/mortbay/jetty/jetty/6.1.26/jetty-6.1.26.jar:/home/w205/.m2/repository/joda-time/joda-time/2.0/joda-time-2.0.jar:/home/w205/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/w205/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/w205/.m2/repository/com/esotericsoftware/kryo/kryo/2.21/kryo-2.21.jar:/home/w205/.m2/repository/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2.jar:/home/w205/.m2/repository/org/apache/storm/storm-core/0.9.5/storm-core-0.9.5.jar:/home/w205/.m2/repository/compojure/compojure/1.1.3/compojure-1.1.3.jar:/home/w205/.m2/repository/com/esotericsoftware/reflectasm/reflectasm/1.07/reflectasm-1.07-shaded.jar:/home/w205/.m2/repository/com/twitter/carbonite/1.4.0/carbonite-1.4.0.jar:/home/w205/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar:/home/w205/.m2/repository/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1.jar:/home/w205/.m2/repository/org/clojure/data.json/0.2.6/data.json-0.2.6.jar:/home/w205/.m2/repository/org/slf4j/log4j-over-slf4j/1.6.6/log4j-over-slf4j-1.6.6.jar:/home/w205/.m2/repository/org/jgrapht/jgrapht-core/0.9.0/jgrapht-core-0.9.0.jar:/home/w205/.m2/repository/org/clojure/clojure/1.5.1/clojure-1.5.1.jar:/home/w205/.m2/repository/org/clojure/tools.logging/0.2.3/tools.logging-0.2.3.jar:/home/w205/.m2/repository/org/ow2/asm/asm/4.0/asm-4.0.jar:/home/w205/.m2/repository/clout/clout/1.0.1/clout-1.0.1.jar:/home/w205/.m2/repository/org/apache/commons/commons-exec/1.1/commons-exec-1.1.jar:/home/w205/.m2/repository/com/googlecode/disruptor/disruptor/2.10.1/disruptor-2.10.1.jar:/home/w205/.m2/repository/org/clojure/core.incubator/0.1.0/core.incubator-0.1.0.jar:/home/w205/.m2/repository/org/clojure/tools.cli/0.2.4/tools.cli-0.2.4.jar
+3250 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+3250 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=/tmp
+3250 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+3250 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:os.name=Linux
+3250 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+3251 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:os.version=2.6.32-504.12.2.el6.centos.plus.x86_64
+3251 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:user.name=w205
+3251 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:user.home=/home/w205
+3251 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Client environment:user.dir=/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:host.name=ip-172-31-20-232.ec2.internal
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:java.version=1.7.0_79
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:java.vendor=Oracle Corporation
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:java.home=/opt/jdk1.7.0_79/jre
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:java.class.path=/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/test:/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/topologies:/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/dev-resources:/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/_resources:/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/_build/classes:/home/w205/.m2/repository/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar:/home/w205/.m2/repository/org/clojure/tools.macro/0.1.0/tools.macro-0.1.0.jar:/home/w205/.m2/repository/ring/ring-core/1.1.5/ring-core-1.1.5.jar:/home/w205/.m2/repository/hiccup/hiccup/0.3.6/hiccup-0.3.6.jar:/home/w205/.m2/repository/ring/ring-servlet/0.3.11/ring-servlet-0.3.11.jar:/home/w205/.m2/repository/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar:/home/w205/.m2/repository/org/clojure/math.numeric-tower/0.0.1/math.numeric-tower-0.0.1.jar:/home/w205/.m2/repository/clj-time/clj-time/0.4.1/clj-time-0.4.1.jar:/home/w205/.m2/repository/org/objenesis/objenesis/1.2/objenesis-1.2.jar:/home/w205/.m2/repository/com/twitter/chill-java/0.3.5/chill-java-0.3.5.jar:/home/w205/.m2/repository/com/parsely/streamparse/0.0.4-SNAPSHOT/streamparse-0.0.4-SNAPSHOT.jar:/home/w205/.m2/repository/ring/ring-jetty-adapter/0.3.11/ring-jetty-adapter-0.3.11.jar:/home/w205/.m2/repository/jline/jline/2.11/jline-2.11.jar:/home/w205/.m2/repository/clj-stacktrace/clj-stacktrace/0.2.2/clj-stacktrace-0.2.2.jar:/home/w205/.m2/repository/org/clojure/tools.nrepl/0.2.12/tools.nrepl-0.2.12.jar:/home/w205/.m2/repository/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar:/home/w205/.m2/repository/ring/ring-devel/0.3.11/ring-devel-0.3.11.jar:/home/w205/.m2/repository/org/mortbay/jetty/jetty-util/6.1.26/jetty-util-6.1.26.jar:/home/w205/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar:/home/w205/.m2/repository/clojure-complete/clojure-complete/0.2.4/clojure-complete-0.2.4.jar:/home/w205/.m2/repository/org/yaml/snakeyaml/1.11/snakeyaml-1.11.jar:/home/w205/.m2/repository/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar:/home/w205/.m2/repository/commons-lang/commons-lang/2.5/commons-lang-2.5.jar:/home/w205/.m2/repository/org/mortbay/jetty/jetty/6.1.26/jetty-6.1.26.jar:/home/w205/.m2/repository/joda-time/joda-time/2.0/joda-time-2.0.jar:/home/w205/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4.jar:/home/w205/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/w205/.m2/repository/com/esotericsoftware/kryo/kryo/2.21/kryo-2.21.jar:/home/w205/.m2/repository/com/esotericsoftware/minlog/minlog/1.2/minlog-1.2.jar:/home/w205/.m2/repository/org/apache/storm/storm-core/0.9.5/storm-core-0.9.5.jar:/home/w205/.m2/repository/compojure/compojure/1.1.3/compojure-1.1.3.jar:/home/w205/.m2/repository/com/esotericsoftware/reflectasm/reflectasm/1.07/reflectasm-1.07-shaded.jar:/home/w205/.m2/repository/com/twitter/carbonite/1.4.0/carbonite-1.4.0.jar:/home/w205/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar:/home/w205/.m2/repository/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1.jar:/home/w205/.m2/repository/org/clojure/data.json/0.2.6/data.json-0.2.6.jar:/home/w205/.m2/repository/org/slf4j/log4j-over-slf4j/1.6.6/log4j-over-slf4j-1.6.6.jar:/home/w205/.m2/repository/org/jgrapht/jgrapht-core/0.9.0/jgrapht-core-0.9.0.jar:/home/w205/.m2/repository/org/clojure/clojure/1.5.1/clojure-1.5.1.jar:/home/w205/.m2/repository/org/clojure/tools.logging/0.2.3/tools.logging-0.2.3.jar:/home/w205/.m2/repository/org/ow2/asm/asm/4.0/asm-4.0.jar:/home/w205/.m2/repository/clout/clout/1.0.1/clout-1.0.1.jar:/home/w205/.m2/repository/org/apache/commons/commons-exec/1.1/commons-exec-1.1.jar:/home/w205/.m2/repository/com/googlecode/disruptor/disruptor/2.10.1/disruptor-2.10.1.jar:/home/w205/.m2/repository/org/clojure/core.incubator/0.1.0/core.incubator-0.1.0.jar:/home/w205/.m2/repository/org/clojure/tools.cli/0.2.4/tools.cli-0.2.4.jar
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:java.io.tmpdir=/tmp
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:java.compiler=<NA>
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:os.name=Linux
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:os.arch=amd64
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:os.version=2.6.32-504.12.2.el6.centos.plus.x86_64
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:user.name=w205
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:user.home=/home/w205
+3317 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Server environment:user.dir=/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount
+5222 [main] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /tmp/5fb1cff1-d94e-404e-b09b-da877800a8ff/version-2 snapdir /tmp/5fb1cff1-d94e-404e-b09b-da877800a8ff/version-2
+5237 [main] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - binding to port 0.0.0.0/0.0.0.0:2000
+5251 [main] INFO  backtype.storm.zookeeper - Starting inprocess zookeeper at port 2000 and dir /tmp/5fb1cff1-d94e-404e-b09b-da877800a8ff
+5679 [main] INFO  backtype.storm.daemon.nimbus - Starting Nimbus with conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "storm.messaging.netty.flush.check.interval.ms" 10, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/103b9090-d72c-495e-80eb-df6acabf8379", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "storm.meta.serialization.delegate" "backtype.storm.serialization.DefaultSerializationDelegate", "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 300, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" [6700 6701 6702 6703], "topology.environment" nil, "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.worker.receiver.thread.count" 1, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.max.task.parallelism" nil, "storm.messaging.netty.transfer.batch.size" 262144, "topology.classpath" nil}
+5694 [main] INFO  backtype.storm.daemon.nimbus - Using default scheduler
+5711 [main] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+6042 [main] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+6045 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@50394e80
+6092 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+6094 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59808
+6108 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+6114 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59808
+6117 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.persistence.FileTxnLog - Creating new log file: log.1
+6136 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d0000, negotiated timeout = 20000
+6138 [main-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+6148 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d0000 with negotiated timeout 20000 for client /127.0.0.1:59808
+6149 [main-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+7207 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1562024149d0000
+7222 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:59808 which had sessionid 0x1562024149d0000
+7223 [main-EventThread] INFO  org.apache.storm.zookeeper.ClientCnxn - EventThread shut down
+7223 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Session: 0x1562024149d0000 closed
+7225 [main] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+7226 [main] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+7226 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@af3ba1
+7239 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+7239 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+7239 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59809
+7240 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59809
+7241 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d0001 with negotiated timeout 20000 for client /127.0.0.1:59809
+7241 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d0001, negotiated timeout = 20000
+7241 [main-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+7313 [main] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+7314 [main] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+7314 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@301a0ce5
+7315 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+7315 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59810
+7316 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+7316 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59810
+7333 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d0002 with negotiated timeout 20000 for client /127.0.0.1:59810
+7333 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d0002, negotiated timeout = 20000
+7333 [main-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+7334 [main-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+7336 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1562024149d0002
+7337 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Session: 0x1562024149d0002 closed
+7337 [main] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+7338 [main] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+7338 [main-EventThread] INFO  org.apache.storm.zookeeper.ClientCnxn - EventThread shut down
+7338 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@5e3fee22
+7341 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+7342 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+7343 [main] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+7343 [main] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+7352 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@cd35cb2
+7353 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+7353 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+7368 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:59810 which had sessionid 0x1562024149d0002
+7369 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59811
+7369 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59811
+7370 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59812
+7370 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59812
+7371 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d0003 with negotiated timeout 20000 for client /127.0.0.1:59811
+7371 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d0003, negotiated timeout = 20000
+7371 [main-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+7372 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d0004 with negotiated timeout 20000 for client /127.0.0.1:59812
+7372 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d0004, negotiated timeout = 20000
+7372 [main-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+7372 [main-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+7374 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1562024149d0004
+7375 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Session: 0x1562024149d0004 closed
+7375 [main] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+7376 [main] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+7384 [main-EventThread] INFO  org.apache.storm.zookeeper.ClientCnxn - EventThread shut down
+7388 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@63dc7d3a
+7389 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+7390 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+7391 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  org.apache.storm.zookeeper.server.NIOServerCnxn - caught end of stream exception
+org.apache.storm.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x1562024149d0004, likely client has closed socket
+	at org.apache.storm.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) ~[storm-core-0.9.5.jar:0.9.5]
+	at org.apache.storm.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-0.9.5.jar:0.9.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+7402 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:59812 which had sessionid 0x1562024149d0004
+7403 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59813
+7403 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59813
+7404 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d0005 with negotiated timeout 20000 for client /127.0.0.1:59813
+7405 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d0005, negotiated timeout = 20000
+7405 [main-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+7485 [main] INFO  backtype.storm.daemon.supervisor - Starting Supervisor with conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "storm.messaging.netty.flush.check.interval.ms" 10, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/a49c3183-3353-4d62-9e81-d500adc6964b", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "storm.meta.serialization.delegate" "backtype.storm.serialization.DefaultSerializationDelegate", "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 300, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1024 1025 1026), "topology.environment" nil, "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.worker.receiver.thread.count" 1, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.max.task.parallelism" nil, "storm.messaging.netty.transfer.batch.size" 262144, "topology.classpath" nil}
+7507 [main] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+7508 [main] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+7509 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@58a31982
+7510 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+7510 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59814
+7510 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+7511 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59814
+7527 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d0006, negotiated timeout = 20000
+7527 [main-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+7527 [main-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+7528 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d0006 with negotiated timeout 20000 for client /127.0.0.1:59814
+7530 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1562024149d0006
+7531 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Session: 0x1562024149d0006 closed
+7531 [main] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+7531 [main] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+7531 [main-EventThread] INFO  org.apache.storm.zookeeper.ClientCnxn - EventThread shut down
+7532 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] WARN  org.apache.storm.zookeeper.server.NIOServerCnxn - caught end of stream exception
+org.apache.storm.zookeeper.server.ServerCnxn$EndOfStreamException: Unable to read additional data from client sessionid 0x1562024149d0006, likely client has closed socket
+	at org.apache.storm.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:228) ~[storm-core-0.9.5.jar:0.9.5]
+	at org.apache.storm.zookeeper.server.NIOServerCnxnFactory.run(NIOServerCnxnFactory.java:208) [storm-core-0.9.5.jar:0.9.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+7532 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@53d329f7
+7533 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+7533 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+7536 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:59814 which had sessionid 0x1562024149d0006
+7536 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59815
+7537 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59815
+7546 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d0007, negotiated timeout = 20000
+7547 [main-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+7547 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d0007 with negotiated timeout 20000 for client /127.0.0.1:59815
+8605 [main] INFO  backtype.storm.daemon.supervisor - Starting supervisor with id e380f090-1f34-4bdf-9caa-92823ec86475 at host ip-172-31-20-232.ec2.internal
+8612 [main] INFO  backtype.storm.daemon.supervisor - Starting Supervisor with conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "storm.messaging.netty.flush.check.interval.ms" 10, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/0c3cd55c-2dd4-4f3f-afc7-8940dc79722c", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "storm.meta.serialization.delegate" "backtype.storm.serialization.DefaultSerializationDelegate", "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 300, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1027 1028 1029), "topology.environment" nil, "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.worker.receiver.thread.count" 1, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.max.task.parallelism" nil, "storm.messaging.netty.transfer.batch.size" 262144, "topology.classpath" nil}
+8614 [main] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+8615 [main] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+8615 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@8d6f633
+8624 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+8625 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59816
+8625 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+8625 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59816
+8627 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d0008 with negotiated timeout 20000 for client /127.0.0.1:59816
+8627 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d0008, negotiated timeout = 20000
+8627 [main-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+8628 [main-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+9630 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1562024149d0008
+9631 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:59816 which had sessionid 0x1562024149d0008
+9632 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Session: 0x1562024149d0008 closed
+9632 [main] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+9632 [main] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+9632 [main-EventThread] INFO  org.apache.storm.zookeeper.ClientCnxn - EventThread shut down
+9633 [main] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@1c121308
+9633 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+9634 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59817
+9634 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+9634 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59817
+9637 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d0009 with negotiated timeout 20000 for client /127.0.0.1:59817
+9639 [main-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d0009, negotiated timeout = 20000
+9639 [main-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+10648 [main] INFO  backtype.storm.daemon.supervisor - Starting supervisor with id ff94f08c-cbf2-41e3-b681-e947854808ee at host ip-172-31-20-232.ec2.internal
+10784 [main] INFO  backtype.storm.daemon.nimbus - Received topology submission for tweetwordcount with conf {"storm.id" "tweetwordcount-1-1469418056", "topology.acker.executors" 2, "streamparse.log.path" "\"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs\"", "topology.kryo.decorators" (), "topology.name" "tweetwordcount", "topology.max.spout.pending" 5000, "topology.debug" false, "topology.kryo.register" nil, "topology.message.timeout.secs" 60, "topology.workers" 2, "topology.max.task.parallelism" nil, "streamparse.log.level" "debug"}
+10935 [main] INFO  backtype.storm.daemon.nimbus - Activating tweetwordcount: tweetwordcount-1-1469418056
+11183 [main] INFO  backtype.storm.scheduler.EvenScheduler - Available slots: (["ff94f08c-cbf2-41e3-b681-e947854808ee" 1027] ["ff94f08c-cbf2-41e3-b681-e947854808ee" 1028] ["ff94f08c-cbf2-41e3-b681-e947854808ee" 1029] ["e380f090-1f34-4bdf-9caa-92823ec86475" 1024] ["e380f090-1f34-4bdf-9caa-92823ec86475" 1025] ["e380f090-1f34-4bdf-9caa-92823ec86475" 1026])
+11336 [main] INFO  backtype.storm.daemon.nimbus - Setting new assignment for topology id tweetwordcount-1-1469418056: #backtype.storm.daemon.common.Assignment{:master-code-dir "/tmp/103b9090-d72c-495e-80eb-df6acabf8379/nimbus/stormdist/tweetwordcount-1-1469418056", :node->host {"e380f090-1f34-4bdf-9caa-92823ec86475" "ip-172-31-20-232.ec2.internal", "ff94f08c-cbf2-41e3-b681-e947854808ee" "ip-172-31-20-232.ec2.internal"}, :executor->node+port {[2 2] ["e380f090-1f34-4bdf-9caa-92823ec86475" 1024], [3 3] ["ff94f08c-cbf2-41e3-b681-e947854808ee" 1027], [4 4] ["e380f090-1f34-4bdf-9caa-92823ec86475" 1024], [5 5] ["ff94f08c-cbf2-41e3-b681-e947854808ee" 1027], [6 6] ["e380f090-1f34-4bdf-9caa-92823ec86475" 1024], [7 7] ["ff94f08c-cbf2-41e3-b681-e947854808ee" 1027], [8 8] ["e380f090-1f34-4bdf-9caa-92823ec86475" 1024], [9 9] ["ff94f08c-cbf2-41e3-b681-e947854808ee" 1027], [10 10] ["e380f090-1f34-4bdf-9caa-92823ec86475" 1024], [1 1] ["ff94f08c-cbf2-41e3-b681-e947854808ee" 1027]}, :executor->start-time-secs {[2 2] 1469418056, [3 3] 1469418056, [4 4] 1469418056, [5 5] 1469418056, [6 6] 1469418056, [7 7] 1469418056, [8 8] 1469418056, [9 9] 1469418056, [10 10] 1469418056, [1 1] 1469418056}}
+12917 [Thread-5] INFO  backtype.storm.daemon.supervisor - Copying resources at file:/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/_resources/resources to /tmp/0c3cd55c-2dd4-4f3f-afc7-8940dc79722c/supervisor/stormdist/tweetwordcount-1-1469418056/resources
+12921 [Thread-3] INFO  backtype.storm.daemon.supervisor - Copying resources at file:/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/_resources/resources to /tmp/a49c3183-3353-4d62-9e81-d500adc6964b/supervisor/stormdist/tweetwordcount-1-1469418056/resources
+13054 [Thread-6] INFO  backtype.storm.daemon.supervisor - Launching worker with assignment #backtype.storm.daemon.supervisor.LocalAssignment{:storm-id "tweetwordcount-1-1469418056", :executors ([3 3] [5 5] [7 7] [9 9] [1 1])} for this supervisor ff94f08c-cbf2-41e3-b681-e947854808ee on port 1027 with id 262abf06-80e3-42fb-a58d-61812138a446
+13059 [Thread-6] INFO  backtype.storm.daemon.worker - Launching worker for tweetwordcount-1-1469418056 on ff94f08c-cbf2-41e3-b681-e947854808ee:1027 with id 262abf06-80e3-42fb-a58d-61812138a446 and conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "storm.messaging.netty.flush.check.interval.ms" 10, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/0c3cd55c-2dd4-4f3f-afc7-8940dc79722c", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "storm.meta.serialization.delegate" "backtype.storm.serialization.DefaultSerializationDelegate", "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 300, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1027 1028 1029), "topology.environment" nil, "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.worker.receiver.thread.count" 1, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.max.task.parallelism" nil, "storm.messaging.netty.transfer.batch.size" 262144, "topology.classpath" nil}
+13068 [Thread-6] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+13069 [Thread-6] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+13068 [Thread-4] INFO  backtype.storm.daemon.supervisor - Launching worker with assignment #backtype.storm.daemon.supervisor.LocalAssignment{:storm-id "tweetwordcount-1-1469418056", :executors ([2 2] [4 4] [6 6] [8 8] [10 10])} for this supervisor e380f090-1f34-4bdf-9caa-92823ec86475 on port 1024 with id 0c5511f6-1929-4e7b-b34b-b572c87e0383
+13071 [Thread-6] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@4030f4ee
+13072 [Thread-6-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+13072 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59818
+13072 [Thread-6-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+13075 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59818
+13091 [Thread-4] INFO  backtype.storm.daemon.worker - Launching worker for tweetwordcount-1-1469418056 on e380f090-1f34-4bdf-9caa-92823ec86475:1024 with id 0c5511f6-1929-4e7b-b34b-b572c87e0383 and conf {"dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "storm.messaging.netty.flush.check.interval.ms" 10, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/a49c3183-3353-4d62-9e81-d500adc6964b", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "storm.meta.serialization.delegate" "backtype.storm.serialization.DefaultSerializationDelegate", "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" nil, "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 300, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" nil, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1024 1025 1026), "topology.environment" nil, "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.message.timeout.secs" 30, "task.refresh.poll.secs" 10, "topology.workers" 1, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.worker.receiver.thread.count" 1, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.max.task.parallelism" nil, "storm.messaging.netty.transfer.batch.size" 262144, "topology.classpath" nil}
+13091 [Thread-4] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+13091 [Thread-4] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+13092 [Thread-4] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000 sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@1b5ff357
+13092 [Thread-4-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+13093 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59819
+13093 [Thread-4-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+13093 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59819
+13099 [Thread-6-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d000a, negotiated timeout = 20000
+13099 [Thread-6-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+13100 [Thread-6-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+13108 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d000a with negotiated timeout 20000 for client /127.0.0.1:59818
+13109 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d000b with negotiated timeout 20000 for client /127.0.0.1:59819
+13110 [Thread-4-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d000b, negotiated timeout = 20000
+13110 [Thread-4-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+13110 [Thread-4-EventThread] INFO  backtype.storm.zookeeper - Zookeeper state update: :connected:none
+13112 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1562024149d000b
+13113 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Processed session termination for sessionid: 0x1562024149d000a
+13113 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:59819 which had sessionid 0x1562024149d000b
+13114 [Thread-4] INFO  org.apache.storm.zookeeper.ZooKeeper - Session: 0x1562024149d000b closed
+13114 [Thread-4] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+13114 [Thread-4] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+13114 [Thread-4-EventThread] INFO  org.apache.storm.zookeeper.ClientCnxn - EventThread shut down
+13115 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxn - Closed socket connection for client /127.0.0.1:59818 which had sessionid 0x1562024149d000a
+13115 [Thread-6-EventThread] INFO  org.apache.storm.zookeeper.ClientCnxn - EventThread shut down
+13115 [Thread-6] INFO  org.apache.storm.zookeeper.ZooKeeper - Session: 0x1562024149d000a closed
+13116 [Thread-4] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@48d50790
+13125 [Thread-6] INFO  backtype.storm.utils.StormBoundedExponentialBackoffRetry - The baseSleepTimeMs [1000] the maxSleepTimeMs [30000] the maxRetries [5]
+13131 [Thread-6] INFO  org.apache.storm.curator.framework.imps.CuratorFrameworkImpl - Starting
+13141 [Thread-4-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+13141 [Thread-4-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+13141 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59820
+13141 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59820
+13143 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d000c with negotiated timeout 20000 for client /127.0.0.1:59820
+13143 [Thread-4-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d000c, negotiated timeout = 20000
+13146 [Thread-6] INFO  org.apache.storm.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost:2000/storm sessionTimeout=20000 watcher=org.apache.storm.curator.ConnectionState@5c994f87
+13147 [Thread-6-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2000. Will not attempt to authenticate using SASL (unknown error)
+13147 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.NIOServerCnxnFactory - Accepted socket connection from /127.0.0.1:59821
+13148 [Thread-6-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Socket connection established to localhost/127.0.0.1:2000, initiating session
+13148 [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2000] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Client attempting to establish new session at /127.0.0.1:59821
+13161 [Thread-4-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+13161 [SyncThread:0] INFO  org.apache.storm.zookeeper.server.ZooKeeperServer - Established session 0x1562024149d000d with negotiated timeout 20000 for client /127.0.0.1:59821
+13162 [Thread-6-SendThread(localhost:2000)] INFO  org.apache.storm.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2000, sessionid = 0x1562024149d000d, negotiated timeout = 20000
+13162 [Thread-6-EventThread] INFO  org.apache.storm.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+13181 [Thread-6] INFO  backtype.storm.daemon.worker - Reading Assignments.
+13225 [Thread-4] INFO  backtype.storm.daemon.worker - Reading Assignments.
+13464 [Thread-6] INFO  backtype.storm.daemon.worker - Launching receive-thread for ff94f08c-cbf2-41e3-b681-e947854808ee:1027
+13462 [Thread-4] INFO  backtype.storm.daemon.worker - Launching receive-thread for e380f090-1f34-4bdf-9caa-92823ec86475:1024
+13502 [Thread-7-worker-receiver-thread-0] INFO  backtype.storm.messaging.loader - Starting receive-thread: [stormId: tweetwordcount-1-1469418056, port: 1027, thread-id: 0 ]
+13518 [Thread-8-worker-receiver-thread-0] INFO  backtype.storm.messaging.loader - Starting receive-thread: [stormId: tweetwordcount-1-1469418056, port: 1024, thread-id: 0 ]
+14349 [refresh-active-timer] INFO  backtype.storm.daemon.worker - All connections are ready for worker e380f090-1f34-4bdf-9caa-92823ec86475:1024 with id 0c5511f6-1929-4e7b-b34b-b572c87e0383
+14367 [refresh-active-timer] INFO  backtype.storm.daemon.worker - All connections are ready for worker ff94f08c-cbf2-41e3-b681-e947854808ee:1027 with id 262abf06-80e3-42fb-a58d-61812138a446
+14431 [Thread-6] INFO  backtype.storm.daemon.executor - Loading executor count-bolt:[3 3]
+14432 [Thread-4] INFO  backtype.storm.daemon.executor - Loading executor __acker:[2 2]
+14482 [Thread-4] INFO  backtype.storm.daemon.executor - Loaded executor tasks __acker:[2 2]
+14521 [Thread-6] INFO  backtype.storm.daemon.executor - Loaded executor tasks count-bolt:[3 3]
+14551 [Thread-6] INFO  backtype.storm.daemon.executor - Finished loading executor count-bolt:[3 3]
+14587 [Thread-4] INFO  backtype.storm.daemon.executor - Timeouts disabled for executor __acker:[2 2]
+14587 [Thread-4] INFO  backtype.storm.daemon.executor - Finished loading executor __acker:[2 2]
+14608 [Thread-6] INFO  backtype.storm.daemon.executor - Loading executor parse-tweet-bolt:[5 5]
+14625 [Thread-6] INFO  backtype.storm.daemon.executor - Loaded executor tasks parse-tweet-bolt:[5 5]
+14627 [Thread-4] INFO  backtype.storm.daemon.executor - Loading executor count-bolt:[4 4]
+14638 [Thread-6] INFO  backtype.storm.daemon.executor - Finished loading executor parse-tweet-bolt:[5 5]
+14652 [Thread-4] INFO  backtype.storm.daemon.executor - Loaded executor tasks count-bolt:[4 4]
+14654 [Thread-4] INFO  backtype.storm.daemon.executor - Finished loading executor count-bolt:[4 4]
+14666 [Thread-6] INFO  backtype.storm.daemon.executor - Loading executor parse-tweet-bolt:[7 7]
+14668 [Thread-6] INFO  backtype.storm.daemon.executor - Loaded executor tasks parse-tweet-bolt:[7 7]
+14685 [Thread-4] INFO  backtype.storm.daemon.executor - Loading executor parse-tweet-bolt:[6 6]
+14685 [Thread-6] INFO  backtype.storm.daemon.executor - Finished loading executor parse-tweet-bolt:[7 7]
+14704 [Thread-4] INFO  backtype.storm.daemon.executor - Loaded executor tasks parse-tweet-bolt:[6 6]
+14718 [Thread-6] INFO  backtype.storm.daemon.executor - Loading executor tweet-spout:[9 9]
+14719 [Thread-6] INFO  backtype.storm.daemon.executor - Loaded executor tasks tweet-spout:[9 9]
+14734 [Thread-6] INFO  backtype.storm.daemon.executor - Finished loading executor tweet-spout:[9 9]
+14748 [Thread-4] INFO  backtype.storm.daemon.executor - Finished loading executor parse-tweet-bolt:[6 6]
+14751 [Thread-6] INFO  backtype.storm.daemon.executor - Loading executor __system:[-1 -1]
+14752 [Thread-6] INFO  backtype.storm.daemon.executor - Loaded executor tasks __system:[-1 -1]
+14767 [Thread-4] INFO  backtype.storm.daemon.executor - Loading executor tweet-spout:[8 8]
+14768 [Thread-4] INFO  backtype.storm.daemon.executor - Loaded executor tasks tweet-spout:[8 8]
+14779 [Thread-4] INFO  backtype.storm.daemon.executor - Finished loading executor tweet-spout:[8 8]
+14785 [Thread-4] INFO  backtype.storm.daemon.executor - Loading executor tweet-spout:[10 10]
+14795 [Thread-4] INFO  backtype.storm.daemon.executor - Loaded executor tasks tweet-spout:[10 10]
+14797 [Thread-6] INFO  backtype.storm.daemon.executor - Finished loading executor __system:[-1 -1]
+14811 [Thread-4] INFO  backtype.storm.daemon.executor - Finished loading executor tweet-spout:[10 10]
+14828 [Thread-6] INFO  backtype.storm.daemon.executor - Loading executor __acker:[1 1]
+14829 [Thread-6] INFO  backtype.storm.daemon.executor - Loaded executor tasks __acker:[1 1]
+14831 [Thread-4] INFO  backtype.storm.daemon.executor - Loading executor __system:[-1 -1]
+14832 [Thread-4] INFO  backtype.storm.daemon.executor - Loaded executor tasks __system:[-1 -1]
+14833 [Thread-6] INFO  backtype.storm.daemon.executor - Timeouts disabled for executor __acker:[1 1]
+14833 [Thread-6] INFO  backtype.storm.daemon.executor - Finished loading executor __acker:[1 1]
+14843 [Thread-4] INFO  backtype.storm.daemon.executor - Finished loading executor __system:[-1 -1]
+14864 [Thread-4] INFO  backtype.storm.daemon.worker - Worker has topology config {"storm.id" "tweetwordcount-1-1469418056", "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "storm.messaging.netty.flush.check.interval.ms" 10, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/a49c3183-3353-4d62-9e81-d500adc6964b", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "storm.meta.serialization.delegate" "backtype.storm.serialization.DefaultSerializationDelegate", "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" 2, "streamparse.log.path" "\"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs\"", "topology.kryo.decorators" (), "topology.name" "tweetwordcount", "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 300, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" 5000, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1024 1025 1026), "topology.environment" nil, "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.kryo.register" nil, "topology.message.timeout.secs" 60, "task.refresh.poll.secs" 10, "topology.workers" 2, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.worker.receiver.thread.count" 1, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.max.task.parallelism" nil, "storm.messaging.netty.transfer.batch.size" 262144, "topology.classpath" nil, "streamparse.log.level" "debug"}
+14864 [Thread-4] INFO  backtype.storm.daemon.worker - Worker 0c5511f6-1929-4e7b-b34b-b572c87e0383 for storm tweetwordcount-1-1469418056 on e380f090-1f34-4bdf-9caa-92823ec86475:1024 has finished loading
+14877 [Thread-6] INFO  backtype.storm.daemon.worker - Worker has topology config {"storm.id" "tweetwordcount-1-1469418056", "dev.zookeeper.path" "/tmp/dev-storm-zookeeper", "topology.tick.tuple.freq.secs" nil, "topology.builtin.metrics.bucket.size.secs" 60, "topology.fall.back.on.java.serialization" true, "topology.max.error.report.per.interval" 5, "zmq.linger.millis" 0, "topology.skip.missing.kryo.registrations" true, "storm.messaging.netty.client_worker_threads" 1, "ui.childopts" "-Xmx768m", "storm.zookeeper.session.timeout" 20000, "nimbus.reassign" true, "topology.trident.batch.emit.interval.millis" 50, "storm.messaging.netty.flush.check.interval.ms" 10, "nimbus.monitor.freq.secs" 10, "logviewer.childopts" "-Xmx128m", "java.library.path" "/usr/local/lib:/opt/local/lib:/usr/lib", "topology.executor.send.buffer.size" 1024, "storm.local.dir" "/tmp/0c3cd55c-2dd4-4f3f-afc7-8940dc79722c", "storm.messaging.netty.buffer_size" 5242880, "supervisor.worker.start.timeout.secs" 120, "topology.enable.message.timeouts" true, "nimbus.cleanup.inbox.freq.secs" 600, "nimbus.inbox.jar.expiration.secs" 3600, "drpc.worker.threads" 64, "storm.meta.serialization.delegate" "backtype.storm.serialization.DefaultSerializationDelegate", "topology.worker.shared.thread.pool.size" 4, "nimbus.host" "localhost", "storm.messaging.netty.min_wait_ms" 100, "storm.zookeeper.port" 2000, "transactional.zookeeper.port" nil, "topology.executor.receive.buffer.size" 1024, "transactional.zookeeper.servers" nil, "storm.zookeeper.root" "/storm", "storm.zookeeper.retry.intervalceiling.millis" 30000, "supervisor.enable" true, "storm.messaging.netty.server_worker_threads" 1, "storm.zookeeper.servers" ["localhost"], "transactional.zookeeper.root" "/transactional", "topology.acker.executors" 2, "streamparse.log.path" "\"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs\"", "topology.kryo.decorators" (), "topology.name" "tweetwordcount", "topology.transfer.buffer.size" 1024, "topology.worker.childopts" nil, "drpc.queue.size" 128, "worker.childopts" "-Xmx768m", "supervisor.heartbeat.frequency.secs" 5, "topology.error.throttle.interval.secs" 10, "zmq.hwm" 0, "drpc.port" 3772, "supervisor.monitor.frequency.secs" 3, "drpc.childopts" "-Xmx768m", "topology.receiver.buffer.size" 8, "task.heartbeat.frequency.secs" 3, "topology.tasks" nil, "storm.messaging.netty.max_retries" 300, "topology.spout.wait.strategy" "backtype.storm.spout.SleepSpoutWaitStrategy", "nimbus.thrift.max_buffer_size" 1048576, "topology.max.spout.pending" 5000, "storm.zookeeper.retry.interval" 1000, "topology.sleep.spout.wait.strategy.time.ms" 1, "nimbus.topology.validator" "backtype.storm.nimbus.DefaultTopologyValidator", "supervisor.slots.ports" (1027 1028 1029), "topology.environment" nil, "topology.debug" false, "nimbus.task.launch.secs" 120, "nimbus.supervisor.timeout.secs" 60, "topology.kryo.register" nil, "topology.message.timeout.secs" 60, "task.refresh.poll.secs" 10, "topology.workers" 2, "supervisor.childopts" "-Xmx256m", "nimbus.thrift.port" 6627, "topology.stats.sample.rate" 0.05, "worker.heartbeat.frequency.secs" 1, "topology.tuple.serializer" "backtype.storm.serialization.types.ListDelegateSerializer", "topology.disruptor.wait.strategy" "com.lmax.disruptor.BlockingWaitStrategy", "topology.multilang.serializer" "backtype.storm.multilang.JsonSerializer", "nimbus.task.timeout.secs" 30, "storm.zookeeper.connection.timeout" 15000, "topology.kryo.factory" "backtype.storm.serialization.DefaultKryoFactory", "drpc.invocations.port" 3773, "logviewer.port" 8000, "zmq.threads" 1, "storm.zookeeper.retry.times" 5, "topology.worker.receiver.thread.count" 1, "storm.thrift.transport" "backtype.storm.security.auth.SimpleTransportPlugin", "topology.state.synchronization.timeout.secs" 60, "supervisor.worker.timeout.secs" 30, "nimbus.file.copy.expiration.secs" 600, "storm.messaging.transport" "backtype.storm.messaging.netty.Context", "logviewer.appender.name" "A1", "storm.messaging.netty.max_wait_ms" 1000, "drpc.request.timeout.secs" 600, "storm.local.mode.zmq" false, "ui.port" 8080, "nimbus.childopts" "-Xmx1024m", "storm.cluster.mode" "local", "topology.max.task.parallelism" nil, "storm.messaging.netty.transfer.batch.size" 262144, "topology.classpath" nil, "streamparse.log.level" "debug"}
+14879 [Thread-6] INFO  backtype.storm.daemon.worker - Worker 262abf06-80e3-42fb-a58d-61812138a446 for storm tweetwordcount-1-1469418056 on ff94f08c-cbf2-41e3-b681-e947854808ee:1027 has finished loading
+15573 [Thread-32-__system] INFO  backtype.storm.daemon.executor - Preparing bolt __system:(-1)
+15574 [Thread-18-parse-tweet-bolt] INFO  backtype.storm.daemon.executor - Preparing bolt parse-tweet-bolt:(7)
+15575 [Thread-28-tweet-spout] INFO  backtype.storm.daemon.executor - Opening spout tweet-spout:(10)
+15584 [Thread-24-tweet-spout] INFO  backtype.storm.daemon.executor - Opening spout tweet-spout:(8)
+15586 [Thread-12-__acker] INFO  backtype.storm.daemon.executor - Preparing bolt __acker:(2)
+15645 [Thread-12-__acker] INFO  backtype.storm.daemon.executor - Prepared bolt __acker:(2)
+15648 [Thread-32-__system] INFO  backtype.storm.daemon.executor - Prepared bolt __system:(-1)
+15724 [Thread-18-parse-tweet-bolt] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+15734 [Thread-28-tweet-spout] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+15736 [Thread-24-tweet-spout] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+15886 [Thread-22-parse-tweet-bolt] INFO  backtype.storm.daemon.executor - Preparing bolt parse-tweet-bolt:(6)
+15887 [Thread-22-parse-tweet-bolt] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+15896 [Thread-16-count-bolt] INFO  backtype.storm.daemon.executor - Preparing bolt count-bolt:(4)
+15896 [Thread-16-count-bolt] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+15897 [Thread-31-__acker] INFO  backtype.storm.daemon.executor - Preparing bolt __acker:(1)
+15897 [Thread-31-__acker] INFO  backtype.storm.daemon.executor - Prepared bolt __acker:(1)
+15897 [Thread-14-parse-tweet-bolt] INFO  backtype.storm.daemon.executor - Preparing bolt parse-tweet-bolt:(5)
+15898 [Thread-14-parse-tweet-bolt] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+15898 [Thread-20-tweet-spout] INFO  backtype.storm.daemon.executor - Opening spout tweet-spout:(9)
+15898 [Thread-20-tweet-spout] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+15899 [Thread-11-count-bolt] INFO  backtype.storm.daemon.executor - Preparing bolt count-bolt:(3)
+15899 [Thread-11-count-bolt] INFO  backtype.storm.utils.ShellProcess - Storm multilang serializer: backtype.storm.multilang.JsonSerializer
+15965 [Thread-27-__system] INFO  backtype.storm.daemon.executor - Preparing bolt __system:(-1)
+15966 [Thread-27-__system] INFO  backtype.storm.daemon.executor - Prepared bolt __system:(-1)
+17351 [Thread-14-parse-tweet-bolt] INFO  backtype.storm.task.ShellBolt - Launched subprocess with pid 6287
+17365 [Thread-18-parse-tweet-bolt] INFO  backtype.storm.task.ShellBolt - Launched subprocess with pid 6282
+17425 [Thread-18-parse-tweet-bolt] INFO  backtype.storm.task.ShellBolt - Start checking heartbeat...
+17426 [Thread-18-parse-tweet-bolt] INFO  backtype.storm.daemon.executor - Prepared bolt parse-tweet-bolt:(7)
+17562 [Thread-22-parse-tweet-bolt] INFO  backtype.storm.task.ShellBolt - Launched subprocess with pid 6289
+17581 [Thread-22-parse-tweet-bolt] INFO  backtype.storm.task.ShellBolt - Start checking heartbeat...
+17581 [Thread-22-parse-tweet-bolt] INFO  backtype.storm.daemon.executor - Prepared bolt parse-tweet-bolt:(6)
+17663 [Thread-36] ERROR backtype.storm.task.ShellBolt - Halting process: ShellBolt died.
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/0c3cd55c-2dd4-4f3f-afc7-8940dc79722c/supervisor/stormdist/tweetwordcount-1-1469418056/resources/"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs"/streamparse_tweetwordcount_parse-tweet-bolt_7_6282.log'
+
+
+	at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+	at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+17663 [Thread-36] ERROR backtype.storm.daemon.executor - 
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/0c3cd55c-2dd4-4f3f-afc7-8940dc79722c/supervisor/stormdist/tweetwordcount-1-1469418056/resources/"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs"/streamparse_tweetwordcount_parse-tweet-bolt_7_6282.log'
+
+
+	at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+	at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+17678 [Thread-14-parse-tweet-bolt] INFO  backtype.storm.task.ShellBolt - Start checking heartbeat...
+17678 [Thread-14-parse-tweet-bolt] INFO  backtype.storm.daemon.executor - Prepared bolt parse-tweet-bolt:(5)
+17681 [Thread-35] ERROR backtype.storm.task.ShellBolt - Halting process: ShellBolt died.
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/0c3cd55c-2dd4-4f3f-afc7-8940dc79722c/supervisor/stormdist/tweetwordcount-1-1469418056/resources/"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs"/streamparse_tweetwordcount_parse-tweet-bolt_5_6287.log'
+
+
+	at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+	at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+17681 [Thread-35] ERROR backtype.storm.daemon.executor - 
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/0c3cd55c-2dd4-4f3f-afc7-8940dc79722c/supervisor/stormdist/tweetwordcount-1-1469418056/resources/"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs"/streamparse_tweetwordcount_parse-tweet-bolt_5_6287.log'
+
+
+	at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+	at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+17744 [Thread-39] ERROR backtype.storm.task.ShellBolt - Halting process: ShellBolt died.
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/a49c3183-3353-4d62-9e81-d500adc6964b/supervisor/stormdist/tweetwordcount-1-1469418056/resources/"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs"/streamparse_tweetwordcount_parse-tweet-bolt_6_6289.log'
+
+
+	at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+	at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+17745 [Thread-39] ERROR backtype.storm.daemon.executor - 
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/a49c3183-3353-4d62-9e81-d500adc6964b/supervisor/stormdist/tweetwordcount-1-1469418056/resources/"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs"/streamparse_tweetwordcount_parse-tweet-bolt_6_6289.log'
+
+
+	at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+	at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+17747 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1562024149d000d type:create cxid:0x38 zxid:0x28 txntype:-1 reqpath:n/a Error Path:/storm/errors/tweetwordcount-1-1469418056 Error:KeeperErrorCode = NodeExists for /storm/errors/tweetwordcount-1-1469418056
+17759 [ProcessThread(sid:0 cport:-1):] INFO  org.apache.storm.zookeeper.server.PrepRequestProcessor - Got user-level KeeperException when processing sessionid:0x1562024149d000d type:create cxid:0x3a zxid:0x2a txntype:-1 reqpath:n/a Error Path:/storm/errors/tweetwordcount-1-1469418056/parse-tweet-bolt Error:KeeperErrorCode = NodeExists for /storm/errors/tweetwordcount-1-1469418056/parse-tweet-bolt
+17954 [Thread-16-count-bolt] INFO  backtype.storm.task.ShellBolt - Launched subprocess with pid 6286
+17975 [Thread-16-count-bolt] INFO  backtype.storm.task.ShellBolt - Start checking heartbeat...
+17975 [Thread-16-count-bolt] INFO  backtype.storm.daemon.executor - Prepared bolt count-bolt:(4)
+18177 [Thread-41] ERROR backtype.storm.task.ShellBolt - Halting process: ShellBolt died.
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/a49c3183-3353-4d62-9e81-d500adc6964b/supervisor/stormdist/tweetwordcount-1-1469418056/resources/"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs"/streamparse_tweetwordcount_count-bolt_4_6286.log'
+
+
+	at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+	at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+18287 [Thread-41] ERROR backtype.storm.daemon.executor - 
+java.lang.RuntimeException: backtype.storm.multilang.NoOutputException: Pipe to subprocess seems to be broken! No output read.
+Serializer Exception:
+Traceback (most recent call last):
+  File "/usr/lib64/python2.7/runpy.py", line 162, in _run_module_as_main
+    "__main__", fname, loader, pkg_name)
+  File "/usr/lib64/python2.7/runpy.py", line 72, in _run_code
+    exec code in run_globals
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 25, in <module>
+    main()
+  File "/usr/lib/python2.7/site-packages/streamparse/run.py", line 21, in main
+    cls().run()
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 484, in run
+    self._setup_component(storm_conf, context)
+  File "/usr/lib/python2.7/site-packages/streamparse/storm/component.py", line 246, in _setup_component
+    backupCount=backup_count)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 118, in __init__
+    BaseRotatingHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/handlers.py", line 65, in __init__
+    logging.FileHandler.__init__(self, filename, mode, encoding, delay)
+  File "/usr/lib64/python2.7/logging/__init__.py", line 897, in __init__
+    StreamHandler.__init__(self, self._open())
+  File "/usr/lib64/python2.7/logging/__init__.py", line 916, in _open
+    stream = open(self.baseFilename, self.mode)
+IOError: [Errno 2] No such file or directory: u'/tmp/a49c3183-3353-4d62-9e81-d500adc6964b/supervisor/stormdist/tweetwordcount-1-1469418056/resources/"/home/w205/w205-summer-16-labs-exercises/exercise_2/EX2Tweetwordcount/logs"/streamparse_tweetwordcount_count-bolt_4_6286.log'
+
+
+	at backtype.storm.utils.ShellProcess.readShellMsg(ShellProcess.java:101) ~[storm-core-0.9.5.jar:0.9.5]
+	at backtype.storm.task.ShellBolt$BoltReaderRunnable.run(ShellBolt.java:318) ~[storm-core-0.9.5.jar:0.9.5]
+	at java.lang.Thread.run(Thread.java:745) [na:1.7.0_79]
+Traceback (most recent call last):
+  File "/usr/bin/sparse", line 9, in <module>
+    load_entry_point('streamparse==2.1.4', 'console_scripts', 'sparse')()
+  File "/usr/lib/python2.7/site-packages/streamparse/cli/sparse.py", line 57, in main
+    args.func(args)
+  File "/usr/lib/python2.7/site-packages/streamparse/cli/run.py", line 81, in main
+    debug=args.debug)
+  File "/usr/lib/python2.7/site-packages/streamparse/cli/run.py", line 52, in run_local_topology
+    run(full_cmd)
+  File "/usr/lib/python2.7/site-packages/invoke/__init__.py", line 32, in run
+    return Context().run(command, **kwargs)
+  File "/usr/lib/python2.7/site-packages/invoke/context.py", line 53, in run
+    return runner_class(context=self).run(command, **kwargs)
+  File "/usr/lib/python2.7/site-packages/invoke/runners.py", line 363, in run
+    raise Failure(result)
+invoke.exceptions.Failure: Command execution failure!
+
+Exit code: 11
+
+Stderr:
+
+
+
+
