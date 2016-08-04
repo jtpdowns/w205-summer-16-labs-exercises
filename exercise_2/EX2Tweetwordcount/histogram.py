@@ -9,7 +9,7 @@ if len(sys.argv) == 2:
     cur = conn.cursor()
     cur.execute("SELECT word, count from Tweetwordcount WHERE count >= %s AND count <= %s", (minValue, maxValue))
     for pair in cur.fetchall():
-        print pair
+        print pair[0] + ": " + pair[1]
 else:
     print 'Please enter exactly one pair of integers' \
           ' after the program name, in order, and with' \
