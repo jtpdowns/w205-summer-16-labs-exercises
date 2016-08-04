@@ -1,0 +1,11 @@
+Hi Manos,
+
+Sorry for the delay with this, but I was a little disheartened, and I wasn't sure exactly what the deadline was after the extension. I was unable to even install streamparse properly on my last few attempts, and I worry that something may have changed with the software. It's possible that I messed up something with the systems administration, but I was unable to overcome it.
+
+I attempted to write the database interaction scripts based on examples that I saw online, and I hope that they would work in a real application, but I was unable to test them. Also, since I didn't get data, I couldn't generate the Plot.png file or the screenshots that were requested.
+
+Sorry to underperform here, but it was tough to do much without Storm working for me. It's interesting technology, but I'll probably avoid streaming analytics for a while. Let me know if I can provide you anything else to help grading this easier.
+
+Thanks,
+Joe
+
